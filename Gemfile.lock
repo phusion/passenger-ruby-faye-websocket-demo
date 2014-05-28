@@ -1,19 +1,23 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    daemon_controller (1.1.5)
-    passenger (4.0.19)
-      daemon_controller (>= 1.1.0)
+    daemon_controller (1.2.0)
+    eventmachine (1.0.3)
+    faye-websocket (0.7.3)
+      eventmachine (>= 0.12.0)
+      websocket-driver (>= 0.3.1)
+    passenger (4.0.43)
+      daemon_controller (>= 1.2.0)
       rack
       rake (>= 0.8.1)
     rack (1.5.2)
-    rake (10.1.0)
-    websocket (1.1.1)
+    rake (10.3.2)
+    websocket-driver (0.3.3)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  faye-websocket
   passenger
   rack
-  websocket

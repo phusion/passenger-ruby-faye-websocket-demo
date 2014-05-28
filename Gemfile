@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
-gem 'websocket'
+gem 'faye-websocket'
 gem 'rack'
 gem 'passenger', :require => false
