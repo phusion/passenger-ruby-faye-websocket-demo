@@ -66,7 +66,7 @@ Then restart Nginx, and access the demo application at http://passenger-ruby-fay
 <a name="running_apache"></a>
 ### Running the demo in Passenger for Apache
 
-Apache itself doesn't work very well with WebSockets, so running in Apache is not recommended. Having said that, Socket.io gracefully falls back to polling when run on Apache, so the demo still works.
+Apache itself doesn't work very well with WebSockets, so running in Apache is not recommended.
 
 Create a virtual host in your Apache configuration file:
 
@@ -92,7 +92,7 @@ Then restart Apache, and access the demo application at http://passenger-ruby-fa
 <a name="multithreading_not_required"></a>
 ### Multithreading not required
 
-WebSockets works great on both the open source variant of Phusion Passenger, as well as on [Phusion Passenger Enterprise](https://www.phusionpassenger.com/). Multithreading is *not* required for faye-websocket to work optimally, because faye-websocket uses EventMachine to serve WebSockets.
+WebSockets work great on both the open source variant of Phusion Passenger, as well as on [Phusion Passenger Enterprise](https://www.phusionpassenger.com/). Multithreading is *not* required for faye-websocket to work optimally, because faye-websocket uses EventMachine to serve WebSockets.
 
 <a name="non_faye_demo"></a>
 ### Non-Faye demo
