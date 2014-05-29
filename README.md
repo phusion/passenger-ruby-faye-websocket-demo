@@ -7,13 +7,13 @@ If you like this demo, please [tweet about it](https://twitter.com/share) or [fo
 **Table of contents**
 
  * [Getting started](#getting_started)
- * [Notes][#notes]
- * [Next steps][#next_steps]
- * [About Phusion Passenger][#about]
+ * [Notes](#notes)
+ * [Next steps](#next_steps)
+ * [About Phusion Passenger](#about)
 
 <center><img src="http://blog.phusion.nl/wp-content/uploads/2012/07/Passenger_chair_256x256.jpg" width="150" height="150" alt="Phusion Passenger"></center>
 
-~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------------------------------------
 
 <a name="getting_started"></a>
 ## Getting started
