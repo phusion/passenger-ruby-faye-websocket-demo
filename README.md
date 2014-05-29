@@ -4,10 +4,18 @@ This application demonstrates WebSocket support in [the Phusion Passenger applic
 
 If you like this demo, please [tweet about it](https://twitter.com/share) or [follow us on Twitter](https://twitter.com/phusion_nl).
 
-See also: [_>> What is Phusion Passenger, and why should I care?_](#about)
+**Table of contents**
+
+ * [Getting started](#getting_started)
+ * [Notes][#notes]
+ * [Next steps][#next_steps]
+ * [About Phusion Passenger][#about]
 
 <center><img src="http://blog.phusion.nl/wp-content/uploads/2012/07/Passenger_chair_256x256.jpg" width="150" height="150" alt="Phusion Passenger"></center>
 
+~~~~~~~~~~~~~~~~~~~~~~~
+
+<a name="getting_started"></a>
 ## Getting started
 
 ### Preparations
@@ -69,6 +77,7 @@ Add `passenger-ruby-faye-websocket.demo` to your `/etc/hosts`:
 
 Then restart Apache, and access the demo application at http://passenger-ruby-faye-websocket.demo:3000/
 
+<a name="notes"></a>
 ## Notes
 
 ### Multithreading not required
@@ -79,6 +88,7 @@ WebSockets works great on both the open source variant of Phusion Passenger, as 
 
 There is also a Phusion Passenger + WebSocket demo that does not use the faye-websocket gem: https://github.com/phusion/passenger-ruby-websocket-demo. That demo is implemented using pure Rack and a low-level WebSocket parser library, showing you how things might work if you use WebSockets through a different gem.
 
+<a name="next_steps"></a>
 ## Next steps
 
  * Using WebSockets on Phusion Passenger? [Tweet about us](https://twitter.com/share), [follow us on Twitter](https://twitter.com/phusion_nl) or [fork us on Github](https://github.com/phusion/passenger).
