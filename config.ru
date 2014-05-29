@@ -1,12 +1,7 @@
 require 'faye/websocket'
 
 app = lambda do |env|
-  case env['PATH_INFO']
-  when '/'
-    Rack::File.new('public/index.html').call(env)
-
-  when '/websocket'
-    pp env
+  if env['PATH_INFO'] == '/websocket'
     ws = Faye::WebSocket.new(env)
 
     timer = EM.add_periodic_timer(1) do
@@ -26,7 +21,7 @@ app = lambda do |env|
     ws.rack_response
 
   else
-    Rack::Directory.new("public").call(env)
+    [404, { "Content-Type" => "text/plain" }, ["Not found"]]
   end
 end
 

@@ -6,7 +6,7 @@ If you like this demo, please [tweet about it](https://twitter.com/share) or [fo
 
 See also: [_>> What is Phusion Passenger, and why should I care?_](#about)
 
-<center><img src="http://blog.phusion.nl/wp-content/uploads/2013/10/nodelogo.png" height="150" alt="Node.js"> <img src="http://blog.phusion.nl/wp-content/uploads/2012/07/Passenger_chair_256x256.jpg" width="150" height="150" alt="Phusion Passenger"></center>
+<center><img src="http://blog.phusion.nl/wp-content/uploads/2012/07/Passenger_chair_256x256.jpg" width="150" height="150" alt="Phusion Passenger"></center>
 
 ## Getting started
 
@@ -69,19 +69,15 @@ Add `passenger-ruby-faye-websocket.demo` to your `/etc/hosts`:
 
 Then restart Apache, and access the demo application at http://passenger-ruby-faye-websocket.demo:3000/
 
-## Multithreading and performance
+## Notes
 
-WebSockets works great on both the open source variant of Phusion Passenger, as well as on [Phusion Passenger Enterprise](https://www.phusionpassenger.com/). For optimal performance, Phusion Passenger Enterprise with multithreading is recommended. You should use the following settings for enabling multithreading. The more concurrent users you have, the higher your thread count should be. As a rule, your thread count should be at least the number of WebSocket sessions you have.
+### Multithreading not required
 
-Apache:
+WebSockets works great on both the open source variant of Phusion Passenger, as well as on [Phusion Passenger Enterprise](https://www.phusionpassenger.com/). Multithreading is *not* required for faye-websocket to work optimally, because faye-websocket uses EventMachine to serve WebSockets.
 
-    PassengerConcurrencyModel thread
-    PassengerThreadCount 64
+### Non-Faye demo
 
-Nginx:
-
-    passenger_concurrency_model thread
-    passenger_thread_count 64
+There is also a Phusion Passenger + WebSocket demo that does not use the faye-websocket gem: https://github.com/phusion/passenger-ruby-websocket-demo. That demo is implemented using pure Rack and a low-level WebSocket parser library, showing you how things might work if you use WebSockets through a different gem.
 
 ## Next steps
 
@@ -91,10 +87,6 @@ Nginx:
 [<img src="http://www.phusion.nl/assets/logo.png">](http://www.phusion.nl/)
 
 Please enjoy Phusion Passenger, a product by [Phusion](http://www.phusion.nl/). :-)
-
-## Non-Faye demo
-
-There is also a Phusion Passenger + WebSocket demo that does not use the faye-websocket gem: https://github.com/phusion/passenger-ruby-websocket-demo. That demo is implemented using pure Rack and a low-level WebSocket parser library.
 
 <a name="about"></a>
 ## About Phusion Passenger
