@@ -7,7 +7,12 @@ If you like this demo, please [tweet about it](https://twitter.com/share) or [fo
 **Table of contents**
 
  * [Getting started](#getting_started)
+   * [Running the demo in Passenger Standalone](#running_standalone)
+   * [Running the demo in Passenger for Nginx](#running_nginx)
+   * [Running the demo in Passenger for Apache](#running_apache)
  * [Notes](#notes)
+   * [Multithreading not required](#multithreading_not_required)
+   * [Non-Faye demo](#non_faye_demo)
  * [Next steps](#next_steps)
  * [About Phusion Passenger](#about)
 
@@ -18,6 +23,7 @@ If you like this demo, please [tweet about it](https://twitter.com/share) or [fo
 <a name="getting_started"></a>
 ## Getting started
 
+<a name="preparations"></a>
 ### Preparations
 
  1. [Install Phusion Passenger](https://www.phusionpassenger.com/) 4.0.43 or later.
@@ -30,6 +36,7 @@ If you like this demo, please [tweet about it](https://twitter.com/share) or [fo
 
         bundle install
 
+<a name="running_standalone"></a>
 ### Running the demo in Passenger Standalone
 
 Run:
@@ -38,6 +45,7 @@ Run:
 
 Access the demo application at http://0.0.0.0:3000/ and see it in action.
 
+<a name="running_nginx"></a>
 ### Running the demo in Passenger for Nginx
 
 Create a virtual host in your Nginx configuration file:
@@ -55,6 +63,7 @@ Add `passenger-ruby-faye-websocket.demo` to your `/etc/hosts`:
 
 Then restart Nginx, and access the demo application at http://passenger-ruby-faye-websocket.demo:3000/
 
+<a name="running_apache"></a>
 ### Running the demo in Passenger for Apache
 
 Apache itself doesn't work very well with WebSockets, so running in Apache is not recommended. Having said that, Socket.io gracefully falls back to polling when run on Apache, so the demo still works.
@@ -80,10 +89,12 @@ Then restart Apache, and access the demo application at http://passenger-ruby-fa
 <a name="notes"></a>
 ## Notes
 
+<a name="multithreading_not_required"></a>
 ### Multithreading not required
 
 WebSockets works great on both the open source variant of Phusion Passenger, as well as on [Phusion Passenger Enterprise](https://www.phusionpassenger.com/). Multithreading is *not* required for faye-websocket to work optimally, because faye-websocket uses EventMachine to serve WebSockets.
 
+<a name="non_faye_demo"></a>
 ### Non-Faye demo
 
 There is also a Phusion Passenger + WebSocket demo that does not use the faye-websocket gem: https://github.com/phusion/passenger-ruby-websocket-demo. That demo is implemented using pure Rack and a low-level WebSocket parser library, showing you how things might work if you use WebSockets through a different gem.
