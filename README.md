@@ -11,6 +11,7 @@ If you like this demo, please [tweet about it](https://twitter.com/share) or [fo
    * [Running the demo in Passenger for Nginx](#running_nginx)
    * [Running the demo in Passenger for Apache](#running_apache)
  * [Notes](#notes)
+   * [Tuning](#tuning)
    * [Multithreading not required](#multithreading_not_required)
    * [Non-Faye demo](#non_faye_demo)
  * [Next steps](#next_steps)
@@ -89,6 +90,11 @@ Then restart Apache, and access the demo application at http://passenger-ruby-fa
 <a name="notes"></a>
 ## Notes
 
+<a name="tuning"></a>
+### Tuning
+
+You may have to [tune Passenger for optimal Websocket performance](/config/tuning_sse_and_websockets/).
+
 <a name="multithreading_not_required"></a>
 ### Multithreading not required
 
@@ -116,4 +122,4 @@ Please enjoy Phusion Passenger, a product by [Phusion](http://www.phusion.nl/). 
 
 [Phusion Passenger™](https://www.phusionpassenger.com/) is a web server and application server, designed to be fast, robust and lightweight. It takes a lot of complexity out of deploying web apps, adds powerful enterprise-grade features that are useful in production, and makes administration much easier and less complex. Phusion Passenger supports Ruby, Python, Node.js and Meteor, and is being used by high-profile companies such as **Apple, Pixar, New York Times, AirBnB, Juniper** etc as well as [over 350.000 websites](http://trends.builtwith.com/Web-Server/Phusion-Passenger).
 
-**Learn more:** [Website](https://www.phusionpassenger.com/) | [Documentation](https://www.phusionpassenger.com/documentation_and_support) | [Support resources](https://www.phusionpassenger.com/documentation_and_support) | [Github](https://github.com/phusion/passenger) | [Twitter](https://twitter.com/phusion_nl) | [Blog](http://blog.phusion.nl/)
+**Learn more:** [Website](https://www.phusionpassenger.com/) | [Documentation](https://www.phusionpassenger.com/library/) | [Support resources](https://www.phusionpassenger.com/documentation_and_support) | [Github](https://github.com/phusion/passenger) | [Twitter](https://twitter.com/phusion_nl) | [Blog](http://blog.phusion.nl/)
