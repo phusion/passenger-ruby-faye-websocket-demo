@@ -93,7 +93,7 @@ Then restart Apache, and access the demo application at http://passenger-ruby-fa
 <a name="tuning"></a>
 ### Tuning
 
-You may have to [tune Passenger for optimal Websocket performance](/config/tuning_sse_and_websockets/).
+You may have to [tune Passenger for optimal Websocket performance](https://www.phusionpassenger.com/library/config/tuning_sse_and_websockets/).
 
 <a name="multithreading_not_required"></a>
 ### Multithreading not required
