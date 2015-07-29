@@ -25,7 +25,7 @@ app = lambda do |env|
   end
 end
 
-# See https://www.phusionpassenger.com/library/config/nginx/tuning_sse_and_websockets/
+# See https://www.phusionpassenger.com/library/config/tuning_sse_and_websockets/
 if defined?(PhusionPassenger)
   PhusionPassenger.advertised_concurrency_level = 0
 end
