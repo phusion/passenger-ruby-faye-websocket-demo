@@ -1,16 +1,18 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    eventmachine (1.0.3)
-    faye-websocket (0.7.3)
+    eventmachine (1.0.8)
+    faye-websocket (0.10.2)
       eventmachine (>= 0.12.0)
-      websocket-driver (>= 0.3.1)
+      websocket-driver (>= 0.5.1)
     passenger (5.0.18)
       rack
       rake (>= 0.8.1)
     rack (1.6.4)
     rake (10.4.2)
-    websocket-driver (0.3.3)
+    websocket-driver (0.6.3)
+      websocket-extensions (>= 0.1.0)
+    websocket-extensions (0.1.2)
 
 PLATFORMS
   ruby
@@ -19,3 +21,6 @@ DEPENDENCIES
   faye-websocket
   passenger
   rack
+
+BUNDLED WITH
+   1.10.6
